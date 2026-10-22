@@ -108,61 +108,9 @@ Research topic
     -> human_feedback
         -> regenerate analysts when feedback is provided
         -> continue when approved
-    -> conduct_interview for each analyst
-        -> ask_question
-        -> search_web
-        -> search_web2
-        -> answer_question
-        -> repeat until max turns
-        -> save_interview
-        -> write_section
-    -> write_report
-    -> write_introduction
-    -> write_conclusion
-    -> finalize_report
-    -> final Markdown report
-```
 
-Registered graphs in `langgraph.json`:
 
-| Graph | Entry Point | Purpose |
-|---|---|---|
-| `create_analysts` | `src/agent.py:graph` | Generate and review analyst personas |
-| `asnwer_question` | `src/answering_questions.py:question_answer_graph` | Run a single interview workflow |
-| `deep_agent` | `src/deep_agent.py:graph` | Run the complete research and reporting workflow |
 
----
-
-## Project Structure
-
-```text
-LangGraph_Assistant/
-|
-+-- main.py
-+-- langgraph.json
-+-- pyproject.toml
-+-- uv.lock
-+-- README.md
-+-- screenshots/
-|   `-- Screenshot 2026-09-08 101749.png
-+-- src/
-|   +-- agent.py
-|   +-- answering_questions.py
-|   +-- deep_agent.py
-|   +-- __init__.py
-|   `-- utils/
-|       +-- edges.py
-|       +-- models.py
-|       +-- nodes.py
-|       +-- objects.py
-|       +-- prompts.py
-|       +-- states.py
-|       +-- tools.py
-|       `-- __init__.py
-`-- .env
-```
-
----
 
 ## Getting Started
 
@@ -317,13 +265,3 @@ The full graph returns a `final_report` field containing the generated Markdown 
 - Never commit `.env` or real API keys.
 - Rotate keys immediately if they are accidentally pushed to a public repository.
 - Treat generated reports as research drafts, not final professional advice.
-
----
-
-## License
-
-MIT. Use it, extend it, and build on it.
-=======
-# LangGraph_Research_Assistant_Agent
-This project is to create personal assistant using LangGraph from Scratch
->>>>>>> 374985914f0c6354ffc0a77d282f9297b3518c22
